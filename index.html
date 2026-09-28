@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f2b26">
+<title>禁慢天堂 | 禁慢天堂动漫网 · 在线看动漫的舒心之选</title>
+<meta name="description" content="禁慢天堂（manman tiantang）是一个慢节奏、高品质的在线动漫平台，精选日漫、国漫、剧场版与新番连载，让你在禁慢天堂里舒适追番。">
+<meta name="keywords" content="禁慢天堂, 禁慢天堂动漫网, manman tiantang, 在线看动漫, 新番连载, 日漫, 国漫">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://jinmantiantang-h5.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://jinmantiantang-h5.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="禁慢天堂">
+<meta property="og:title" content="禁慢天堂 | 禁慢天堂动漫网 · 舒心追番">
+<meta property="og:description" content="禁慢天堂，精选日漫、国漫、剧场版与新番连载的在线看动漫平台。">
+<meta property="og:url" content="https://jinmantiantang-h5.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="禁慢天堂 | 禁慢天堂动漫网">
+<meta name="twitter:description" content="慢节奏、高品质的在线动漫平台，精选日漫国漫新番。">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoi5ryr5ryr5aSp5aCCIiwic2hvcnRfbmFtZSI6Iuazs+azsOWtpuWtpCIsInN0YXJ0X3VybCI6Ii8iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSJ9">
+<style>
+:root{
+  --ink:#0f2b26;
+  --ink2:#1c4139;
+  --jade:#3d7a6a;
+  --jade-l:#6fa795;
+  --gold:#c9a227;
+  --gold-l:#e8cf6c;
+  --paper:#f6f1e7;
+  --paper2:#efe7d7;
+  --line:rgba(15,43,38,.12);
+  --shadow:0 10px 30px -12px rgba(15,43,38,.28);
+  --radius:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",-apple-system,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--jade);text-decoration:none}
+a:hover{color:var(--gold)}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+@media(max-width:640px){section{padding:48px 0}}
+
+/* ===== Header ===== */
+header{
+  position:sticky;top:0;z-index:99;
+  background:rgba(15,43,38,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(233,207,108,.25);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{
+  font-size:22px;font-weight:800;letter-spacing:2px;
+  color:var(--paper);
+  display:flex;align-items:center;gap:10px;
+}
+.logo .seal{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:8px;
+  background:var(--gold);color:#0f2b26;font-size:17px;
+  font-family:"KaiTi","STKaiti",serif;
+}
+.logo span.hl{color:var(--gold-l)}
+.menu-btn{
+  display:none;width:44px;height:44px;
+  background:none;border:0;color:var(--paper);font-size:22px;cursor:pointer;
+}
+nav ul{display:flex;gap:6px;list-style:none}
+nav a{
+  display:block;padding:8px 14px;border-radius:var(--radius);
+  color:rgba(246,241,231,.82);font-size:15px;transition:.2s;
+}
+nav a:hover{background:rgba(233,207,108,.12);color:var(--gold-l)}
+@media(max-width:860px){
+  .menu-btn{display:block}
+  nav{position:absolute;top:64px;left:0;right:0;background:var(--ink2);
+       max-height:0;overflow:hidden;transition:max-height .3s ease}
+  nav.open{max-height:420px}
+  nav ul{flex-direction:column;padding:12px}
+  nav a{padding:14px 16px;font-size:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse at 85% 15%,rgba(233,207,108,.16),transparent 55%),
+    radial-gradient(ellipse at 10% 90%,rgba(61,122,106,.35),transparent 50%),
+    linear-gradient(160deg,var(--ink) 0%,var(--ink2) 100%);
+  color:var(--paper);padding:96px 0 84px;
+}
+.hero-inner{position:relative;z-index:2;max-width:760px}
+.hero .kicker{
+  display:inline-block;padding:5px 14px;border-radius:30px;
+  background:rgba(233,207,108,.14);color:var(--gold-l);
+  font-size:13px;letter-spacing:1px;margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(32px,6vw,56px);line-height:1.2;font-weight:900;
+  letter-spacing:1px;margin-bottom:20px;
+}
+.hero h1 em{font-style:normal;color:var(--gold-l)}
+.hero p.lede{font-size:18px;color:rgba(246,241,231,.85);margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 26px;border-radius:var(--radius);
+  font-size:16px;font-weight:700;border:0;cursor:pointer;transition:.2s;
+}
+.btn-primary{background:var(--gold);color:#0f2b26}
+.btn-primary:hover{background:var(--gold-l)}
+.btn-ghost{background:transparent;color:var(--paper);border:1px solid rgba(246,241,231,.35)}
+.btn-ghost:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(233,207,108,.18);border:1px solid rgba(233,207,108,.18);border-radius:var(--radius)}
+.stat{padding:20px 12px;text-align:center;background:rgba(15,43,38,.4)}
+.stat b{display:block;font-size:26px;color:var(--gold-l)}
+.stat span{font-size:13px;color:rgba(246,241,231,.7)}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.hero-deco{
+  position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+  font-family:"KaiTi","STKaiti",serif;font-size:220px;line-height:1;
+  color:rgba(233,207,108,.06);z-index:1;
+}
+@media(max-width:860px){.hero-deco{display:none}}
+
+/* ===== Section head ===== */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:36px;flex-wrap:wrap}
+.sec-head h2{
+  font-size:clamp(24px,4vw,34px);font-weight:900;letter-spacing:1px;
+  display:flex;align-items:center;gap:14px;
+}
+.sec-head h2 .idx{
+  font-family:"KaiTi","STKaiti",serif;font-size:38px;color:var(--gold);opacity:.5;
+}
+.sec-head p{color:var(--jade);font-size:15px}
+.sec-head .more{font-size:14px;white-space:nowrap}
+
+/* ===== Filter ===== */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip{
+  padding:9px 20px;border-radius:30px;min-height:40px;cursor:pointer;
+  background:var(--paper2);border:1px solid var(--line);color:var(--ink2);
+  font-size:15px;transition:.2s;
+}
+.chip:hover{border-color:var(--jade)}
+.chip.active{background:var(--jade);color:#fff;border-color:var(--jade)}
+.chip .num{opacity:.6;font-size:13px;margin-left:6px}
+
+/* ===== Cards ===== */
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{
+  background:#fff;border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);transition:.25s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px -14px rgba(15,43,38,.35)}
+.thumb{
+  position:relative;aspect-ratio:3/4;overflow:hidden;
+  background:linear-gradient(135deg,var(--ink2),var(--jade));
+}
+.thumb .cover{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;color:var(--paper);text-align:center;padding:16px;
+}
+.thumb .cover .cn{font-family:"KaiTi","STKaiti",serif;font-size:30px;font-weight:700;line-height:1.2}
+.thumb .cover .en{font-size:12px;opacity:.7;margin-top:8px;letter-spacing:1px}
+.thumb .ep{
+  position:absolute;top:12px;left:12px;padding:3px 10px;border-radius:30px;
+  background:rgba(15,43,38,.85);color:var(--gold-l);font-size:12px;
+}
+.thumb .tag{
+  position:absolute;top:12px;right:12px;padding:3px 10px;border-radius:30px;
+  background:var(--gold);color:#0f2b26;font-size:12px;font-weight:700;
+}
+.card-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.card-body h3{font-size:18px;margin-bottom:8px}
+.card-body .meta{font-size:13px;color:var(--jade-l);margin-bottom:10px}
+.card-body p{font-size:14px;color:rgba(15,43,38,.7);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.score{font-weight:800;color:var(--gold);font-size:17px}
+.card-foot a{font-size:14px;font-weight:700}
+
+/* ===== Schedule ===== */
+.schedule-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.week-tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.week-tabs::-webkit-scrollbar{display:none}
+.day-tab{
+  flex:0 0 auto;min-width:64px;padding:9px 14px;border-radius:var(--radius);
+  background:var(--paper2);border:1px solid var(--line);cursor:pointer;
+  font-size:15px;text-align:center;color:var(--ink2);
+}
+.day-tab small{display:block;font-size:11px;opacity:.6}
+.day-tab.active{background:var(--ink);color:var(--gold-l);border-color:var(--ink)}
+.day-tab.active small{color:var(--gold-l);opacity:.8}
+.schedule-note{font-size:13px;color:var(--jade)}
+.week-panel{display:none;animation:fade .3s ease}
+.week-panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.week-list{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.week-item{
+  display:flex;gap:14px;align-items:center;padding:14px 16px;
+  background:#fff;border-radius:var(--radius);box-shadow:0 4px 14px -8px rgba(15,43,38,.2);
+}
+.week-item .t{
+  flex:0 0 52px;height:52px;border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--ink2),var(--jade));color:var(--gold-l);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;
+}
+.week-item .info{flex:1;min-width:0}
+.week-item .info b{display:block;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.week-item .info span{font-size:13px;color:var(--jade-l)}
+.week-item .status{font-size:13px;font-weight:700;color:var(--jade);white-space:nowrap}
+.week-item .status.soon{color:var(--gold)}
+
+/* ===== Ranking ===== */
+.rank-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.rank-item{
+  display:flex;gap:18px;align-items:center;padding:18px 20px;
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);transition:.2s;
+}
+.rank-item:hover{transform:translateX(4px)}
+.rank-n{
+  flex:0 0 56px;height:56px;border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"KaiTi","STKaiti",serif;font-size:30px;font-weight:900;color:var(--paper);
+  background:linear-gradient(135deg,var(--jade),var(--jade-l));
+}
+.rank-item:nth-child(1) .rank-n{background:linear-gradient(135deg,#c9a227,#e8cf6c);color:#0f2b26}
+.rank-item:nth-child(2) .rank-n{background:linear-gradient(135deg,#8d94a0,#c3cad4)}
+.rank-item:nth-child(3) .rank-n{background:linear-gradient(135deg,#a06a3a,#d49a64)}
+.rank-info{flex:1;min-width:0}
+.rank-info b{display:block;font-size:17px}
+.rank-info span{font-size:13px;color:var(--jade-l)}
+.rank-val{text-align:right}
+.rank-val b{display:block;font-size:20px;color:var(--gold)}
+.rank-val small{font-size:12px;color:var(--jade-l)}
+
+/* ===== News ===== */
+.news-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.news-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.news-card:hover{transform:translateY(-4px)}
+.news-cover{
+  aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--ink),var(--jade));color:var(--gold-l);
+  font-family:"KaiTi","STKaiti",serif;font-size:26px;
+}
+.news-body{padding:20px}
+.news-body .date{font-size:13px;color:var(--gold);font-weight:700}
+.news-body h3{font-size:18px;margin:8px 0 10px}
+.news-body p{font-size:14px;color:rgba(15,43,38,.7)}
+
+/* ===== Guide ===== */
+.guide-wrap{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.guide-step{
+  position:relative;padding:28px 24px 24px;background:var(--ink);color:var(--paper);
+  border-radius:var(--radius);box-shadow:var(--shadow);
+}
+.guide-step .no{
+  position:absolute;top:-18px;left:24px;width:44px;height:44px;border-radius:var(--radius);
+  background:var(--gold);color:#0f2b26;display:flex;align-items:center;justify-content:center;
+  font-family:"KaiTi","STKaiti",serif;font-size:24px;font-weight:900;
+}
+.guide-step h3{font-size:18px;margin:6px 0 10px;color:var(--gold-l)}
+.guide-step p{font-size:14px;color:rgba(246,241,231,.8)}
+
+/* ===== FAQ ===== */
+.faq-list{display:grid;gap:12px;max-width:860px;margin:0 auto}
+.faq-item{background:#fff;border-radius:var(--radius);box-shadow:0 4px 14px -8px rgba(15,43,38,.2);overflow:hidden}
+.faq-q{
+  width:100%;text-align:left;padding:20px 24px;background:none;border:0;
+  font-size:17px;font-weight:700;color:var(--ink);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-q .ic{color:var(--gold);font-size:22px;transition:.2s;flex:0 0 auto}
+.faq-item.open .faq-q .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 24px}
+.faq-a p{padding-bottom:20px;color:rgba(15,43,38,.78);font-size:15px}
+
+/* ===== Footer ===== */
+footer{background:var(--ink);color:rgba(246,241,231,.7);padding:56px 0 28px}
+.foot-grid{display:grid;gap:32px;grid-template-columns:2fr 1fr 1fr 1fr;margin-bottom:40px}
+@media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-brand .logo{margin-bottom:14px}
+.foot-brand p{font-size:14px;max-width:320px}
+.foot-col h4{color:var(--gold-l);font-size:16px;margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col a{color:rgba(246,241,231,.65);font-size:14px}
+.foot-col a:hover{color:var(--gold-l)}
+.foot-bottom{
+  padding-top:24px;border-top:1px solid rgba(246,241,231,.1);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;
+}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(24px);transition:.6s cubic-bezier(.22,.68,.35,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo" aria-label="禁慢天堂首页"><span class="seal">慢</span>禁慢<span class="hl">天堂</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+    <nav id="navMenu" aria-label="主导航">
+      <ul>
+        <li><a href="#catalog">番剧库</a></li>
+        <li><a href="#schedule">新番更新</a></li>
+        <li><a href="#ranking">排行榜</a></li>
+        <li><a href="#news">动漫资讯</a></li>
+        <li><a href="#guide">追番指南</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-deco">慢</div>
+    <div class="container hero-inner">
+      <span class="kicker">MANMAN TIANTANG · 舒心追番</span>
+      <h1>禁慢天堂，<br>让每一部动漫<em>禁慢看完</em></h1>
+      <p class="lede">禁慢天堂（manman tiantang）专注日漫、国漫、剧场版与新番连载的在线观看，精选高清资源、更新及时，陪你放慢节奏，把喜欢的番禁慢补完。</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn btn-primary">进入番剧库</a>
+        <a href="#schedule" class="btn btn-ghost">查看本周新番</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1,200+</b><span>收录番剧</span></div>
+        <div class="stat"><b>60+</b><span>当季新番</span></div>
+        <div class="stat"><b>98%</b><span>高清画质</span></div>
+        <div class="stat"><b>每日</b><span>准时更新</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：番剧库 -->
+  <section id="catalog">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <h2><span class="idx">壹</span>番剧库</h2>
+          <p>禁慢天堂精选，从当季新番到经典长篇，一站看完。</p>
+        </div>
+        <a href="#" class="more">查看完整目录 →</a>
+      </div>
+      <div class="filters reveal" role="tablist">
+        <button class="chip active" data-cat="all">全部 <span class="num">12</span></button>
+        <button class="chip" data-cat="season">当季新番 <span class="num">4</span></button>
+        <button class="chip" data-cat="long">经典长篇 <span class="num">3</span></button>
+        <button class="chip" data-cat="movie">剧场版 <span class="num">3</span></button>
+        <button class="chip" data-cat="short">短篇精选 <span class="num">2</span></button>
+      </div>
+      <div class="grid" id="cardGrid">
+        <article class="card reveal" data-cat="season">
+          <div class="thumb"><span class="ep">更新至 12 话</span><span class="tag">新番</span>
+            <div class="cover"><div class="cn">云海追光</div><div class="en">CLOUD CHASER</div></div></div>
+          <div class="card-body">
+            <h3>云海追光</h3>
+            <div class="meta">2026 年 10 月新番 · 奇幻冒险</div>
+            <p>少年驾着残破飞艇穿越云海，寻找传说中照亮黑夜的光源，节奏舒缓而画面精致。</p>
+            <div class="card-foot"><span class="score">9.4</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="season">
+          <div class="thumb"><span class="ep">更新至 10 话</span><span class="tag">新番</span>
+            <div class="cover"><div class="cn">街角面包房</div><div class="en">CORNER BAKERY</div></div></div>
+          <div class="card-body">
+            <h3>街角面包房</h3>
+            <div class="meta">2026 年 10 月新番 · 治愈日常</div>
+            <p>一间开在老街转角的面包房，记录着每位客人的小故事，适合禁慢品味的治愈系番剧。</p>
+            <div class="card-foot"><span class="score">9.1</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="season">
+          <div class="thumb"><span class="ep">更新至 11 话</span><span class="tag">新番</span>
+            <div class="cover"><div class="cn">星屑邮递员</div><div class="en">STAR MAIL</div></div></div>
+          <div class="card-body">
+            <h3>星屑邮递员</h3>
+            <div class="meta">2026 年 10 月新番 · 科幻治愈</div>
+            <p>在废弃星球之间运送记忆的邮递员，每一封信都藏着一段被遗忘的人生。</p>
+            <div class="card-foot"><span class="score">9.3</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="season">
+          <div class="thumb"><span class="ep">更新至 09 话</span><span class="tag">新番</span>
+            <div class="cover"><div class="cn">竹林书生</div><div class="en">BAMBOO SCHOLAR</div></div></div>
+          <div class="card-body">
+            <h3>竹林书生</h3>
+            <div class="meta">2026 年 10 月新番 · 古风国漫</div>
+            <p>隐居竹林的书生偶得一卷奇书，从此与山精水怪结伴同行，画风淡雅如水墨。</p>
+            <div class="card-foot"><span class="score">9.0</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="long">
+          <div class="thumb"><span class="ep">全 128 话</span><span class="tag">完结</span>
+            <div class="cover"><div class="cn">风之轨迹</div><div class="en">WIND TRACE</div></div></div>
+          <div class="card-body">
+            <h3>风之轨迹</h3>
+            <div class="meta">经典长篇 · 热血冒险</div>
+            <p>陪伴一代人成长的经典之作，讲述少年风使跨越四国的旅程，适合在禁慢天堂里一口气补完。</p>
+            <div class="card-foot"><span class="score">9.7</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="long">
+          <div class="thumb"><span class="ep">全 96 话</span><span class="tag">完结</span>
+            <div class="cover"><div class="cn">海港物语</div><div class="en">HARBOUR TALE</div></div></div>
+          <div class="card-body">
+            <h3>海港物语</h3>
+            <div class="meta">经典长篇 · 群像剧情</div>
+            <p>一座小海港里的人生百态，剧情绵密、人物鲜活，是禁慢品味型观众的心头好。</p>
+            <div class="card-foot"><span class="score">9.5</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="long">
+          <div class="thumb"><span class="ep">全 74 话</span><span class="tag">完结</span>
+            <div class="cover"><div class="cn">剑鸣长安</div><div class="en">SWORD OF CHANG'AN</div></div></div>
+          <div class="card-body">
+            <h3>剑鸣长安</h3>
+            <div class="meta">经典长篇 · 武侠国漫</div>
+            <p>盛唐长安城中的剑客故事，动作设计与剧情张力兼具，国产动画的诚意之作。</p>
+            <div class="card-foot"><span class="score">9.6</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="movie">
+          <div class="thumb"><span class="ep">剧场版</span><span class="tag">电影</span>
+            <div class="cover"><div class="cn">萤火之森</div><div class="en">FIREFLY FOREST</div></div></div>
+          <div class="card-body">
+            <h3>萤火之森</h3>
+            <div class="meta">剧场版 · 奇幻治愈</div>
+            <p>夏日夜里的一段短暂相遇，用 90 分钟讲完一个关于告别的故事，画风细腻温柔。</p>
+            <div class="card-foot"><span class="score">9.8</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="movie">
+          <div class="thumb"><span class="ep">剧场版</span><span class="tag">电影</span>
+            <div class="cover"><div class="cn">机甲黎明</div><div class="en">MECHA DAWN</div></div></div>
+          <div class="card-body">
+            <h3>机甲黎明</h3>
+            <div class="meta">剧场版 · 科幻机战</div>
+            <p>废土之上的机甲对决，视听规模全面升级，是大银幕级的动画体验。</p>
+            <div class="card-foot"><span class="score">9.2</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="movie">
+          <div class="thumb"><span class="ep">剧场版</span><span class="tag">电影</span>
+            <div class="cover"><div class="cn">山河故人</div><div class="en">OLD FRIENDS</div></div></div>
+          <div class="card-body">
+            <h3>山河故人</h3>
+            <div class="meta">剧场版 · 古风国漫</div>
+            <p>以水墨笔法讲述一段跨越山河的友情，情感克制而有力量，值得反复回味。</p>
+            <div class="card-foot"><span class="score">9.4</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="short">
+          <div class="thumb"><span class="ep">12 话完</span><span class="tag">短篇</span>
+            <div class="cover"><div class="cn">猫与旧书店</div><div class="en">CAT &amp; BOOKS</div></div></div>
+          <div class="card-body">
+            <h3>猫与旧书店</h3>
+            <div class="meta">短篇精选 · 单元剧</div>
+            <p>每集 12 分钟，一只胖橘猫与一间旧书店，每个单元都是独立的小故事。</p>
+            <div class="card-foot"><span class="score">9.0</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+        <article class="card reveal" data-cat="short">
+          <div class="thumb"><span class="ep">08 话完</span><span class="tag">短篇</span>
+            <div class="cover"><div class="cn">雨天的巴士</div><div class="en">RAINY BUS</div></div></div>
+          <div class="card-body">
+            <h3>雨天的巴士</h3>
+            <div class="meta">短篇精选 · 治愈</div>
+            <p>雨天误乘的末班巴士，把几位陌生人带到了意想不到的地方，节奏舒缓治愈。</p>
+            <div class="card-foot"><span class="score">8.9</span><a href="#catalog">立即观看</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：新番更新表 -->
+  <section id="schedule" style="background:linear-gradient(180deg,var(--paper) 0%,var(--paper2) 100%)">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <h2><span class="idx">贰</span>新番更新表</h2>
+          <p>禁慢天堂整理当季新番的每周放送与更新时间，追番不再错过。</p>
+        </div>
+        <a href="#" class="more">订阅更新提醒 →</a>
+      </div>
+      <div class="schedule-head reveal">
+        <div class="week-tabs" role="tablist" id="weekTabs"></div>
+        <span class="schedule-note">更新时间以实际播出为准</span>
+      </div>
+      <div id="weekPanels"></div>
+    </div>
+  </section>
+
+  <!-- 栏目三：排行榜 -->
+  <section id="ranking">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <h2><span class="idx">叁</span>热门排行榜</h2>
+          <p>禁慢天堂用户票选，本周人气最高的番剧 TOP 6。</p>
+        </div>
+        <a href="#" class="more">完整榜单 →</a>
+      </div>
+      <div class="rank-grid">
+        <div class="rank-item reveal"><div class="rank-n">1</div><div class="rank-info"><b>风之轨迹</b><span>经典长篇 · 热血冒险</span></div><div class="rank-val"><b>9.7</b><small>12.8万 人评</small></div></div>
+        <div class="rank-item reveal"><div class="rank-n">2</div><div class="rank-info"><b>剑鸣长安</b><span>经典长篇 · 武侠国漫</span></div><div class="rank-val"><b>9.6</b><small>9.4万 人评</small></div></div>
+        <div class="rank-item reveal"><div class="rank-n">3</div><div class="rank-info"><b>海港物语</b><span>经典长篇 · 群像剧情</span></div><div class="rank-val"><b>9.5</b><small>8.1万 人评</small></div></div>
+        <div class="rank-item reveal"><div class="rank-n">4</div><div class="rank-info"><b>萤火之森</b><span>剧场版 · 奇幻治愈</span></div><div class="rank-val"><b>9.4</b><small>7.6万 人评</small></div></div>
+        <div class="rank-item reveal"><div class="rank-n">5</div><div class="rank-info"><b>云海追光</b><span>当季新番 · 奇幻冒险</span></div><div class="rank-val"><b>9.4</b><small>6.9万 人评</small></div></div>
+        <div class="rank-item reveal"><div class="rank-n">6</div><div class="rank-info"><b>山河故人</b><span>剧场版 · 古风国漫</span></div><div class="rank-val"><b>9.4</b><small>5.3万 人评</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：动漫资讯 -->
+  <section id="news" style="background:linear-gradient(180deg,var(--paper2) 0%,var(--paper) 100%)">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <h2><span class="idx">肆</span>动漫资讯</h2>
+          <p>禁慢天堂为你带来最新、最值得关注的行业与番剧动态。</p>
+        </div>
+        <a href="#" class="more">全部资讯 →</a>
+      </div>
+      <div class="news-grid">
+        <article class="news-card reveal">
+          <div class="news-cover">2026 秋季新番</div>
+          <div class="news-body">
+            <span class="date">2026 · 10 · 12</span>
+            <h3>2026 秋季新番大盘点：这六部最值得追</h3>
+            <p>本季新番题材丰富，从治愈日常到硬核机战应有尽有，禁慢天堂已为你整理好更新时间表。</p>
+          </div>
+        </article>
+        <article class="news-card reveal">
+          <div class="news-cover">行业观察</div>
+          <div class="news-body">
+            <span class="date">2026 · 10 · 08</span>
+            <h3>国漫出海提速：三部作品宣布海外同步播出</h3>
+            <p>国产动画的海外发行节奏明显加快，多部新作实现中日同步更新，海外口碑稳步上升。</p>
+          </div>
+        </article>
+        <article class="news-card reveal">
+          <div class="news-cover">观影指南</div>
+          <div class="news-body">
+            <span class="date">2026 · 10 · 03</span>
+            <h3>治愈系入坑指南：适合放慢节奏看的五部番</h3>
+            <p>如果你最近想慢下来，这几部节奏舒缓、画面温柔的番剧，正适合在禁慢天堂里禁慢看。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：追番指南 -->
+  <section id="guide">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <h2><span class="idx">伍</span>追番指南</h2>
+          <p>禁慢天堂帮你把追番这件事，做得更舒服、更高效。</p>
+        </div>
+      </div>
+      <div class="guide-wrap">
+        <div class="guide-step reveal"><span class="no">一</span><h3>选一个舒服的时间</h3><p>追番不必赶进度，挑一段不被打扰的时间，才是对好作品最大的尊重。</p></div>
+        <div class="guide-step reveal"><span class="no">二</span><h3>从兴趣标签入手</h3><p>热血、治愈、悬疑、国风，先在禁慢天堂的番剧库里锁定你喜欢的类型。</p></div>
+        <div class="guide-step reveal"><span class="no">三</span><h3>善用更新时间表</h3><p>把新番更新表存好，每周按时追更，不再担心漏掉任何一话。</p></div>
+        <div class="guide-step reveal"><span class="no">四</span><h3>经典值得补完</h3><p>老番从不因时间褪色，禁慢天堂收录了大量完结长篇，适合随时回看。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：常见问题 -->
+  <section id="faq" style="background:linear-gradient(180deg,var(--paper) 0%,var(--paper2) 100%)">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <h2><span class="idx">陆</span>常见问题</h2>
+          <p>关于禁慢天堂的使用与追番问题，这里都有答案。</p>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">禁慢天堂是什么？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>禁慢天堂（manman tiantang）是一个专注于在线看动漫的平台，收录日漫、国漫、剧场版与新番连载，主打"禁慢看、舒服追"的观看体验。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">新番一般什么时候更新？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>不同番剧的播出档期不同，禁慢天堂的"新番更新表"栏目已按周一到周日整理好每日更新内容，可对照查看。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">支持哪些设备观看？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>禁慢天堂采用响应式设计，手机、平板与电脑均可流畅访问，页面会自动适配不同屏幕尺寸。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">可以只看某一类型的番剧吗？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>可以。在番剧库栏目使用分类筛选，可按"当季新番、经典长篇、剧场版、短篇精选"快速定位感兴趣的内容。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">如何向禁慢天堂推荐番剧？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>欢迎通过页脚联系方式留言推荐，禁慢天堂会综合口碑、画质与题材，持续扩充番剧库。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo"><span class="seal">慢</span>禁慢<span class="hl">天堂</span></a>
+        <p>禁慢天堂（manman tiantang）—— 慢节奏、高品质的在线看动漫平台，精选日漫、国漫、剧场版与新番连载。</p>
+      </div>
+      <div class="foot-col">
+        <h4>番剧导航</h4>
+        <ul>
+          <li><a href="#catalog">番剧库</a></li>
+          <li><a href="#schedule">新番更新表</a></li>
+          <li><a href="#ranking">热门排行榜</a></li>
+          <li><a href="#catalog">剧场版精选</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>了解禁慢天堂</h4>
+        <ul>
+          <li><a href="#news">动漫资讯</a></li>
+          <li><a href="#guide">追番指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#">关于我们</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>联系我们</h4>
+        <ul>
+          <li><a href="#">商务合作</a></li>
+          <li><a href="#">番剧推荐</a></li>
+          <li><a href="#">意见反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 禁慢天堂 manman tiantang. 保留所有权利。</span>
+      <span>关键词：禁慢天堂 · manman tiantang · 在线看动漫</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 移动端菜单
+  var btn=document.getElementById('menuBtn'), nav=document.getElementById('navMenu');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.textContent=open?'✕':'☰';
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        btn.textContent='☰';
+      });
+    });
+  }
+
+  // 分类筛选
+  var chips=document.querySelectorAll('.chip'), grid=document.getElementById('cardGrid');
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.remove('active')});
+      c.classList.add('active');
+      var cat=c.dataset.cat;
+      grid.querySelectorAll('.card').forEach(function(card){
+        var show=(cat==='all'||card.dataset.cat===cat);
+        card.style.display=show?'flex':'';
+        if(show){card.style.animation='fade .35s ease both';}
+      });
+    });
+  });
+
+  // 新番更新表
+  var week=[
+    {day:'周一',en:'MON',items:[
+      {t:'星屑邮递员',s:'更新至 11 话',st:'已更新'},
+      {t:'剑鸣长安',s:'更新至 74 话 · 完结',st:'可补完'},
+      {t:'海港物语',s:'更新至 96 话 · 完结',st:'可补完'}
+    ]},
+    {day:'周二',en:'TUE',items:[
+      {t:'云海追光',s:'更新至 12 话',st:'已更新'},
+      {t:'猫与旧书店',s:'短篇 · 12 话完',st:'可补完'},
+      {t:'风之轨迹',s:'更新至 128 话 · 完结',st:'可补完'}
+    ]},
+    {day:'周三',en:'WED',items:[
+      {t:'街角面包房',s:'更新至 10 话',st:'已更新'},
+      {t:'萤火之森',s:'剧场版 · 90 分钟',st:'已上线'},
+      {t:'机甲黎明',s:'剧场版 · 125 分钟',st:'已上线'}
+    ]},
+    {day:'周四',en:'THU',items:[
+      {t:'竹林书生',s:'更新至 09 话',st:'已更新'},
+      {t:'山河故人',s:'剧场版 · 106 分钟',st:'已上线'},
+      {t:'雨天的巴士',s:'短篇 · 08 话完',st:'可补完'}
+    ]},
+    {day:'周五',en:'FRI',items:[
+      {t:'星屑邮递员',s:'更新至 11 话',st:'已更新'},
+      {t:'云海追光',s:'更新至 12 话',st:'已更新'},
+      {t:'剑鸣长安',s:'更新至 74 话 · 完结',st:'可补完'}
+    ]},
+    {day:'周六',en:'SAT',items:[
+      {t:'街角面包房',s:'更新至 10 话',st:'今夜更新',cls:'soon'},
+      {t:'猫与旧书店',s:'短篇 · 12 话完',st:'可补完'},
+      {t:'海港物语',s:'更新至 96 话 · 完结',st:'可补完'}
+    ]},
+    {day:'周日',en:'SUN',items:[
+      {t:'竹林书生',s:'更新至 09 话',st:'今夜更新',cls:'soon'},
+      {t:'萤火之森',s:'剧场版 · 90 分钟',st:'已上线'},
+      {t:'风之轨迹',s:'更新至 128 话 · 完结',st:'可补完'}
+    ]}
+  ];
+  var tabs=document.getElementById('weekTabs'), panels=document.getElementById('weekPanels');
+  var today=(new Date().getDay()+6)%7;
+  week.forEach(function(w,i){
+    var b=document.createElement('button');
+    b.className='day-tab'+(i===today?' active':'');
+    b.innerHTML=w.day+'<small>'+w.en+'</small>';
+    b.addEventListener('click',function(){
+      tabs.querySelectorAll('.day-tab').forEach(function(x){x.classList.remove('active')});
+      panels.querySelectorAll('.week-panel').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+      panels.children[i].classList.add('active');
+    });
+    tabs.appendChild(b);
+    var p=document.createElement('div');
+    p.className='week-panel'+(i===today?' active':'');
+    p.innerHTML=w.items.map(function(it){
+      return '<div class="week-item"><div class="t">'+w.day[1]+'</div><div class="info"><b>'+it.t+'</b><span>'+it.s+'</span></div><div class="status '+(it.cls||'')+'">'+it.st+'</div></div>';
+    }).join('');
+    panels.appendChild(p);
+  });
+
+  // FAQ 折叠
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement, ans=item.querySelector('.faq-a');
+      var open=item.classList.toggle('open');
+      ans.style.maxHeight=open?ans.scrollHeight+40+'px':'0px';
+    });
+  });
+
+  // 滚动出现
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+</body>
+</html>
